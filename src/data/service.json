@@ -1,0 +1,73 @@
+
+{
+    "cakes": {
+    "title": "Cakes",
+    "image": "/cake.jpg",
+    "description": "We create beautiful custom cakes for weddings, birthdays, and special occasions.",
+    "varieties": [
+        {
+            "id": 1,
+            "name": "Chocolate Cake",
+            "description": "Rich and moist chocolate cake with decadent chocolate frosting.",
+            "image": "/public/Chocolate-Cake.jpg",
+            "price": 5000
+            
+        },
+        {
+            "id": 2,
+            "name": "Unibow",
+            "description": "Rich and moist chocolate cake with decadent chocolate frosting.",
+            "image": "/public/Birthday-cake.jpg",
+            "price": 15000
+            
+        },
+        {    "id": 3,
+            "name": "Corporate Cake",
+            "description": "Rich and moist chocolate cake with decadent chocolate frosting.",
+            "image": "/public/Corporate-cake.jpg",
+            "price":18000
+        },
+        {
+            "id": 4,
+            "name": "Love Cake",
+            "description": "Rich and moist chocolate cake with decadent chocolate frosting.",
+            "image": "/public/Love-cake.jpg",
+            "price":20000
+        },
+        
+        {
+            "id": 5,
+            "name": "Love Cake",
+            "description": "Rich and moist chocolate cake with decadent chocolate frosting.",
+            "image": "/public/Love-cake.jpg",
+            "price":22000
+        },
+
+        {
+            "id": 6,
+            "name": "Love Cake",
+            "description": "Rich and moist chocolate cake with decadent chocolate frosting.",
+            "image": "/public/Love-cake.jpg",
+            "price":25000
+        }
+    ]
+    
+  },
+  "small-chops": {
+    "title": "Small Chops",
+    "image": "/small-chop.jpg",
+    "description": "Delicious small chops including puff-puff, samosas, spring rolls and more." 
+  },
+  "catering": {
+    "title": "Catering",
+    "image": "/catering.jpg",
+    "description":
+      "Full catering services tailored for your events and guest size."
+  },
+    "decoration": {
+      "title": "Decoration",
+      "image": "/decoration.jpg",
+      "description":
+        "Elegant event decoration that transforms your venue beautifully."
+    }
+  }
