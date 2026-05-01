@@ -1,18 +1,23 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate  } from "react-router-dom";
 import serviceData from "../data/service.json";
 import { useState } from "react";
 
-const Service = ([setCart]) => {
-  const { serviceName } = useParams();
-  const service = serviceData[serviceName];
-  const [selectedItem, setSelectedItem] = useState(null);
-  const [quantity, setQuantity] = useState(1);
+
+const Service = ({setCart}) => {
+const { serviceName } = useParams();
+const service = serviceData[serviceName];
+const [selectedItem, setSelectedItem] = useState(null);
+const [quantity, setQuantity] = useState(1);
+const navigate = useNavigate();
 
    
   
   console.log(serviceData);
   console.log("PARAM:", serviceName);
   console.log("SERVICE:", service);
+  console.log("setCart:", setCart);
+console.log("type:", typeof setCart);
+console.log("handleOrder")
 
   const totalPrice = 
     selectedItem && selectedItem.price
@@ -21,15 +26,18 @@ const Service = ([setCart]) => {
 
   
   const handleAddToCart = () => {
+    console.log("CLICKED")
     if (!selectedItem) return;
+    alert("ADDED TO CART");
 
     const newItem = {
-      id: selectedItem.name,
+      id: selectedItem.id,
       name: selectedItem.name,
       price: selectedItem.price,
+      image: selectedItem.image,
       quantity,
       total: selectedItem.price * quantity,
-    };
+    }
 
     setCart((prevCart) => {
       const existingItem = prevCart.find(
@@ -39,7 +47,7 @@ const Service = ([setCart]) => {
       if (existingItem) {
         return prevCart.map((item) =>
           item.id === newItem.id
-            ? { ...item, quantity: item.quantity + quantity }
+            ? { ...item, quantity: item.quantity + quantity, total: item.total + newItem.total }
             : item
         );
       }
@@ -48,7 +56,12 @@ const Service = ([setCart]) => {
     });
      setSelectedItem(null);
      setQuantity(1);
+
   };
+
+   const handleOrder = () => {
+       navigate("/cart");
+     }
 
   if (!service) {
     return <h1 className="p-10">Service not found</h1>;
@@ -202,9 +215,7 @@ const Service = ([setCart]) => {
 
               <button
   onClick={handleAddToCart}
-  className="w-full mt-4 py-3 rounded-lg text-white font-semibold cursor-pointer"
-  style={{ backgroundColor: "var(--color-secondary)" }}
->
+  className="w-full mt-4 py-3 rounded-lg text-white font-semibold cursor-pointer" style={{ backgroundColor: "var(--color-secondary)" }}>
   Add to Cart
 </button>
               </div>
@@ -214,9 +225,12 @@ const Service = ([setCart]) => {
       )}
 
       {/* Main Order Now button (kept at the bottom) */}
-      <button className="mt-10 px-6 py-3 bg-(--color-secondary) text-white rounded-lg font-semibold">
+      <button 
+      onClick={handleOrder}
+      className="mt-10 px-6 py-3  text-white rounded-lg font-semibold cursor-pointer"  style={{ backgroundColor: "var(--color-secondary)" }}>
         Order Now
       </button>
+      
     </div>
   );
 };

@@ -18,11 +18,12 @@ function App() {
         <Route path='/services' element={<Services/>} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
-        <Route path="/services/:serviceName" element={<Services />} />
+        <Route path="/services/:serviceName" element={<Services setCart={setCart} />} />
        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />}  />
       </Routes>
     </BrowserRouter>
   )
 }
+
 
 export default App;

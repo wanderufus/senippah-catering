@@ -56,7 +56,80 @@
   "small-chops": {
     "title": "Small Chops",
     "image": "/small-chop.jpg",
-    "description": "Delicious small chops including puff-puff, samosas, spring rolls and more." 
+    "description": "Delicious small chops including puff-puff, samosas, spring rolls and more.",
+    "varieties": [
+        {
+            "id": 1,
+            "name": "Puff-Puff",
+            "description": "Soft and fluffy fried dough balls, a popular Nigerian snack.",
+            "image": "/public/puff.jpg",
+            "price": 2000
+            
+        },
+        {
+            "id": 2,
+            "name": "Samosas",
+            "description": "Crispy pastry filled with spiced meat or vegetables.",
+            "image": "/public/samosa.jpg",
+            "price": 3000
+            
+        },
+        {    "id": 3,
+            "name": "Spring Rolls",
+            "description": "Crispy rolls filled with vegetables and/or meat, perfect for any occasion.",
+            "image": "/public/springroll.jpg",
+            "price":4000
+        },
+
+        {    "id": 4,
+            "name": "Wings",
+            "description": "Deliciosly Glazed Chicken Wings, perfect for any occasion.",
+            "image": "/public/wings.jpg",
+            "price":4000
+        },
+
+        {    "id": 5,
+            "name": "Chinchin",
+            "description": "Crunchy delisousness readt to go.",
+            "image": "/public/chinchin.jpg",
+            "price":4000
+        },
+
+        {    "id": 6,
+            "name": "Meat Pie",
+            "description": "Flaky pastry filled with savory meat, a classic Nigerian treat.",
+            "image": "/public/meatpie.jpg",
+            "price":4000
+        },
+
+         {    "id": 7,
+            "name": "Scotch Egg",
+            "description": "Boiled egg wrapped in seasoned meat, coated in breadcrumbs and fried to perfection.",
+            "image": "/public/scotchegg.jpg",
+            "price":4000
+        },
+
+         {    "id": 8,
+            "name": "Sausage Roll",
+            "description": "Savory sausage wrapped in flaky pastry, a crowd-pleasing snack.",
+            "image": "/public/sausageroll.jpg",
+            "price":4000
+        },
+
+         {    "id": 9,
+            "name": "Suya Sticks",
+            "description": "Soft Tender Suya Sticks.",
+            "image": "/public/suyasticks.jpg",
+            "price":4000
+        },
+
+         {    "id": 10,
+            "name": "Kebabs",
+            "description": "Taste of freshly grilled juicy kebabs.",
+            "image": "/public/kebab.jpg",
+            "price":4000
+        }
+    ]
   },
   "catering": {
     "title": "Catering",
