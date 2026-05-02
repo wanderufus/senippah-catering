@@ -18,6 +18,7 @@ const Navbar = () => {
             <Link to="/services" className="hover:text-(--color-accent) uppercase font-bold">Services</Link>
             <Link to="/contact" className="hover:text-(--color-accent) uppercase font-bold">Contact</Link>
             <Link to="/about" className="hover:text-(--color-accent) uppercase font-bold">About</Link>
+            <Link to="/cart" className="hover:text-(--color-accent) uppercase font-bold">Cart</Link>
         </div>
        </nav>
     )
