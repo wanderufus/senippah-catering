@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import serviceData from "../data/service.json";
 import { useState } from "react";
 
-const Service = ([setCart]) => {
+const Service = ({setCart}) => {
   const { serviceName } = useParams();
   const service = serviceData[serviceName];
   const [selectedItem, setSelectedItem] = useState(null);
